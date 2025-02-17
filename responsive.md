@@ -17,8 +17,9 @@
 
         .note-buttons { 
             display: flex;
+            flex-wrap: wrap; /* Wrap items when screen is small */
             justify-content: center;
-            gap: 10px;
+            gap: 10px; /* Spacing between columns */
             margin: 20px; 
         }
 
@@ -26,12 +27,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0 10px;
+            margin: 10px; 
         }
 
         button { 
             margin: 5px; 
-            padding: 10px 15px; 
+            padding: 12px 16px; 
             font-size: 16px;
             border: none;
             background-color: #007BFF;
@@ -49,25 +50,37 @@
             font-size: 18px;
             margin-top: 20px;
             font-weight: bold;
-            display: none;
+            display: none; /* Initially hidden */
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            h2 { font-size: 22px; }
-            button { font-size: 14px; padding: 8px 12px; }
-        }
-
         @media (max-width: 768px) {
-            h2 { font-size: 20px; }
-            button { font-size: 12px; padding: 6px 10px; }
-            .note-buttons { gap: 5px; }
+            h2 {
+                font-size: 22px;
+            }
+
+            .note-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
         }
 
         @media (max-width: 480px) {
-            h2 { font-size: 18px; }
-            button { font-size: 10px; padding: 5px 8px; }
-            .note-buttons { gap: 3px; }
+            h2 {
+                font-size: 20px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 8px;
+                width: 100%;
+                max-width: 200px;
+            }
         }
     </style>
 </head>
